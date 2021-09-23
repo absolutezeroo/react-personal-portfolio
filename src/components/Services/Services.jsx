@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from "react";
-import Innovation from "../../assets/images/innovation.png";
-import "./Services.scss";
+import React from "react";
 import {Container} from "react-bootstrap";
+import InnovationImg from "../../assets/images/innovation.png";
+import "./Services.scss";
 
 const services = [
     {
@@ -14,31 +14,23 @@ const services = [
     },
 ];
 
-function ServiceCard(props) {
-    return (
-        <div className="service__item">
-            <h3>{props.title}</h3>
-            <p>{props.content}</p>
-        </div>
-    );
-}
+const ServiceCard = ({title, content}) => (
+    <div className="service__item">
+        <h3>{title}</h3>
+        <p>{content}</p>
+    </div>
+);
 
 function Services() {
-    let [items, setItem] = useState([]);
-
-    useEffect(() => {
-        setItem(() => [...services]);
-    }, [items]);
-
     return (
-        <Container className="pt-5 pb-5" id="services">
+        <Container className="pt-5 pb-5" id="services" as="section">
             <div className="services__title">
                 <h1>SERVICE<span>S</span></h1>
             </div>
             <div className="d-flex flex-column align-items-center flex-md-row justify-content-between">
-                <img className="me-md-5" src={Innovation} alt="services"/>
+                <img className="me-md-5" src={InnovationImg} alt="services"/>
                 <div>
-                    {items && items.map((service, key) => (
+                    {services && services.map((service, key) => (
                         <ServiceCard key={key} title={service.title} content={service.content}/>
                     ))}
                 </div>

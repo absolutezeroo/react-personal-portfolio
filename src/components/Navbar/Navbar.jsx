@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {Container, Nav, Navbar as BSNavbar} from "react-bootstrap";
 import './Navbar.scss';
 import {Link} from "react-scroll";
@@ -6,35 +6,29 @@ import {Link} from "react-scroll";
 const links = [
     {
         title: 'Accueil',
-        to: 'home-section',
+        to: 'home',
     },
     {
         title: 'Services',
-        to: 'services-section',
+        to: 'services',
     },
     {
         title: 'Projets',
-        to: 'projects-section',
+        to: 'projects',
     }
 ]
 
 const Navbar = () => {
-    let [items, setItem] = useState([]);
-
-    useEffect(() => {
-        setItem(() => [...links]);
-    }, [items]);
-
     return (
         <BSNavbar variant="dark" bg="dark" expand="lg">
             <Container fluid={true}>
-                <BSNavbar.Toggle aria-controls="nav"/>
-                <BSNavbar.Collapse className="justify-content-center" id="nav">
+                <BSNavbar.Toggle aria-controls="navbar"/>
+                <BSNavbar.Collapse className="justify-content-center" id="navbar">
                     <Nav justify={true}>
-                        {items && items.map((item, key) => (
+                        {links && links.map((item, key) => (
                             <Nav.Link duration={800} smooth={true} offset={-50} to={item.to} eventKey={key}
                                       as={Link} key={key}>
-                                <div className="nav-link-text">
+                                <div className="nav-link-text" role="button">
                                     {item.title}
                                 </div>
                             </Nav.Link>

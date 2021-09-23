@@ -3,6 +3,7 @@ import Wave from "react-wavify";
 import Typewriter from "typewriter-effect";
 import SocialIcons from "../Social/SocialIcons";
 import "./Hero.scss";
+import {Container} from "react-bootstrap";
 
 const waveOption = {
     "height": 60,
@@ -15,7 +16,7 @@ const typerTexts = ["Développeur WEB", "Développeur Backend", "Développeur Fr
 
 const Hero = () => {
     return (
-        <section className="hero" id="home">
+        <Container fluid={true} id="home" className="hero" as="section">
             <div className="container">
                 <div className="row justify-content-center">
                     <h1 className="hero__title text-center text-md-start">Salut !</h1>
@@ -36,7 +37,7 @@ const Hero = () => {
                 </div>
             </div>
             <Wave className="position-absolute bottom-0" fill="#5F85DB" options={waveOption}/>
-        </section>
+        </Container>
     )
 };
 

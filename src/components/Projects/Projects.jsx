@@ -1,54 +1,42 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {ScrollMenu} from "react-horizontal-scrolling-menu";
 import {LeftArrow, RightArrow} from "../Arrow/Arrow";
 import ProjectCard from "../Card/ProjectCard";
 import "./Projects.scss";
+import {Container} from "react-bootstrap";
 
 const projects = [];
 
 function Projects() {
-    let [items, setItem] = useState([]);
-
-    useEffect(() => {
-        setItem(() => [...projects]);
-    }, [items]);
-
     return (
-        <section className="projects-section" id="projects">
-            <div className="projects-title">
+        <Container className="projects__section" id="projects" as="section">
+            <div className="projects__title">
                 <h1>PROJECT<span>S</span></h1>
             </div>
 
-            <div className="projects-content">
-                {items.length > 0 && (
+            <div className="projects__content">
+                {projects && projects.length > 0 && (
                     <ScrollMenu
                         wrapperClassName="slider"
                         LeftArrow={LeftArrow}
                         RightArrow={RightArrow}
                         onWheel={onWheel}>
-                        {
-                            items.map((project) => {
-                                return <ProjectCard
-                                    key={project.id}
-                                    itemId={project.id}
-                                    title={project.title}
-                                    description={project.description}
-                                    repo={project.link}
-                                    category={project.category}
-                                    imgLink={project.img}
-                                />
-                            })
-                        }
+                        {projects.map((project) => (
+                            <ProjectCard key={project.id} itemId={project.id} title={project.title}
+                                         description={project.description} repo={project.link}
+                                         category={project.category} imgLink={project.img}
+                            />
+                        ))}
                     </ScrollMenu>
                 )}
-                {items.length === 0 && (
-                    <h6 className="project-notfound">
+                {projects.length === 0 && (
+                    <h6 className="project__notfound">
                         Je n'ai malheureusement encore aucun projet concret à vous présenter.
                     </h6>
                 )}
             </div>
 
-        </section>);
+        </Container>);
 }
 
 export default Projects;
