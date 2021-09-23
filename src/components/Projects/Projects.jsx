@@ -10,44 +10,45 @@ function Projects() {
     let [items, setItem] = useState([]);
 
     useEffect(() => {
-        setItem(items => [...items, ...projects]);
-    }, []);
+        setItem(() => [...projects]);
+    }, [items]);
 
-    return (<section className="projects-section">
-        <div className="projects-title">
-            <h1>PROJECT<span>S</span></h1>
-        </div>
+    return (
+        <section className="projects-section" id="projects">
+            <div className="projects-title">
+                <h1>PROJECT<span>S</span></h1>
+            </div>
 
-        <div className="projects-content">
-            {items.length > 0 && (
-                <ScrollMenu
-                    wrapperClassName="slider"
-                    LeftArrow={LeftArrow}
-                    RightArrow={RightArrow}
-                    onWheel={onWheel}>
-                    {
-                        items.map((project) => {
-                            return <ProjectCard
-                                key={project.id}
-                                itemId={project.id}
-                                title={project.title}
-                                description={project.description}
-                                repo={project.link}
-                                category={project.category}
-                                imgLink={project.img}
-                            />
-                        })
-                    }
-                </ScrollMenu>
-            )}
-            {items.length === 0 && (
-                <h6 className="project-notfound">
-                    Je n'ai malheureusement encore aucun projet concret à vous présenter.
-                </h6>
-            )}
-        </div>
+            <div className="projects-content">
+                {items.length > 0 && (
+                    <ScrollMenu
+                        wrapperClassName="slider"
+                        LeftArrow={LeftArrow}
+                        RightArrow={RightArrow}
+                        onWheel={onWheel}>
+                        {
+                            items.map((project) => {
+                                return <ProjectCard
+                                    key={project.id}
+                                    itemId={project.id}
+                                    title={project.title}
+                                    description={project.description}
+                                    repo={project.link}
+                                    category={project.category}
+                                    imgLink={project.img}
+                                />
+                            })
+                        }
+                    </ScrollMenu>
+                )}
+                {items.length === 0 && (
+                    <h6 className="project-notfound">
+                        Je n'ai malheureusement encore aucun projet concret à vous présenter.
+                    </h6>
+                )}
+            </div>
 
-    </section>);
+        </section>);
 }
 
 export default Projects;

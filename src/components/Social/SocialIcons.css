@@ -1,8 +1,0 @@
-.social-icons a {
-    margin-right: 20px;
-    transition: transform 0.3s;
-}
-
-.social-icons a:hover {
-    transform: scale(1.1, 1.1);
-}

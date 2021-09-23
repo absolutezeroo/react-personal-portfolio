@@ -1,8 +1,12 @@
 .hero {
-  min-height: 400px;
+  min-height: 520px;
   width: 100%;
   position: relative;
   padding: 2rem 0 2rem 0;
+
+  @media(min-width: 576px) {
+    min-height: 460px;
+  }
 }
 
 .hero__title {
@@ -19,6 +23,6 @@
 
 .hero__specialisation {
   color: #5F85DB;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: "Righteous", sans-serif;
 }

@@ -5,7 +5,7 @@ import SocialIcons from "../Social/SocialIcons";
 import "./Hero.scss";
 
 const waveOption = {
-    "height": 50,
+    "height": 60,
     "amplitude": 20,
     "speed": 0.15,
     "points": 6
@@ -15,11 +15,12 @@ const typerTexts = ["Développeur WEB", "Développeur Backend", "Développeur Fr
 
 const Hero = () => {
     return (
-        <section className="hero">
+        <section className="hero" id="home">
             <div className="container">
                 <div className="row justify-content-center">
                     <h1 className="hero__title text-center text-md-start">Salut !</h1>
-                    <h2 className="hero__description text-center text-md-start">Je me nomme CLAYTON BARBIER et je suis,</h2>
+                    <h2 className="hero__description text-center text-md-start">Je me nomme CLAYTON BARBIER et je
+                        suis,</h2>
                     <h3 className="hero__specialisation text-center text-md-start">
                         <Typewriter options={{
                             strings: typerTexts,

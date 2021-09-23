@@ -16,7 +16,7 @@ const services = [
 
 function ServiceCard(props) {
     return (
-        <div className="service">
+        <div className="service__item">
             <h3>{props.title}</h3>
             <p>{props.content}</p>
         </div>
@@ -27,12 +27,12 @@ function Services() {
     let [items, setItem] = useState([]);
 
     useEffect(() => {
-        setItem(items => [...items, ...services]);
-    }, []);
+        setItem(() => [...services]);
+    }, [items]);
 
     return (
         <Container className="pt-5 pb-5" id="services">
-            <div className="services-title">
+            <div className="services__title">
                 <h1>SERVICE<span>S</span></h1>
             </div>
             <div className="d-flex flex-column align-items-center flex-md-row justify-content-between">
