@@ -1,0 +1,19 @@
+.navbar-dark {
+  background-color: #26282B !important;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1.063rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #FFFFFF;
+
+  &:hover,
+  &:focus {
+    color: #5F85DB !important;
+  }
+}
