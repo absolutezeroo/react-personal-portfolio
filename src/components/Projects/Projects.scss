@@ -13,12 +13,11 @@
   border: 3px solid #212529;
 }
 
-.projects__section {
-  margin: 0;
-  padding: 50px 20px;
+.projects-section {
+  padding: 2rem 0 2rem 0;
 }
 
-.projects__content {
+.projects-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +25,11 @@
   margin: 0 auto;
 }
 
-.projects__title h1 {
+.projects-title {
+  margin-bottom: 2rem;
+}
+
+.projects-title h1 {
   color: #FFFFFF;
   font-family: "Righteous", sans-serif;
   font-size: 60px;
@@ -35,11 +38,22 @@
   text-transform: uppercase;
 }
 
-.projects__title span {
+.projects-title span {
   color: #5F85DB;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 200%;
+    height: 5px;
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 }
 
-.project__notfound {
+.project-notfound {
   color: white;
   font-family: "Red Hat Display", sans-serif;
 }

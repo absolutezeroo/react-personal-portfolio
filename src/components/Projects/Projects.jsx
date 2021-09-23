@@ -9,12 +9,12 @@ const projects = [];
 
 function Projects() {
     return (
-        <Container className="projects__section" id="projects" as="section">
-            <div className="projects__title">
+        <Container className="projects-section" id="projects" as="section">
+            <div className="projects-title">
                 <h1>PROJECT<span>S</span></h1>
             </div>
 
-            <div className="projects__content">
+            <div className="projects-content">
                 {projects && projects.length > 0 && (
                     <ScrollMenu
                         wrapperClassName="slider"
@@ -30,7 +30,7 @@ function Projects() {
                     </ScrollMenu>
                 )}
                 {projects.length === 0 && (
-                    <h6 className="project__notfound">
+                    <h6 className="project-notfound">
                         Je n'ai malheureusement encore aucun projet concret à vous présenter.
                     </h6>
                 )}

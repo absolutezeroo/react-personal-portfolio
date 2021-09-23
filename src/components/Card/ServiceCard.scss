@@ -1,0 +1,23 @@
+.service-item {
+    padding: 10px 20px 10px 10px;
+    transition: transform .25s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.15);
+        transform: scale(1.05);
+    }
+}
+
+.service-item h3 {
+    color: white;
+    font-family: "Righteous", sans-serif;
+    font-size: 25px;
+    text-align: left;
+}
+
+.service-item p {
+    color: rgb(206, 205, 205);
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 18px;
+    text-align: left;
+}

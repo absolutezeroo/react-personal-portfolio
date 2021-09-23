@@ -16,13 +16,13 @@ const typerTexts = ["Développeur WEB", "Développeur Backend", "Développeur Fr
 
 const Hero = () => {
     return (
-        <Container fluid={true} id="home" className="hero" as="section">
+        <Container fluid={true} id="home" className="hero-section" as="section">
             <div className="container">
                 <div className="row justify-content-center">
-                    <h1 className="hero__title text-center text-md-start">Salut !</h1>
-                    <h2 className="hero__description text-center text-md-start">Je me nomme CLAYTON BARBIER et je
+                    <h1 className="hero-title text-center text-md-start">Salut !</h1>
+                    <h2 className="hero-description text-center text-md-start">Je me nomme CLAYTON BARBIER et je
                         suis,</h2>
-                    <h3 className="hero__specialisation text-center text-md-start">
+                    <h3 className="hero-specialisation text-center text-md-start">
                         <Typewriter options={{
                             strings: typerTexts,
                             autoStart: true,

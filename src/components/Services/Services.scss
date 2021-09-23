@@ -1,4 +1,8 @@
-.services__title h1 {
+.services-title {
+  margin-bottom: 2rem;
+}
+
+.services-title h1 {
   color: white;
   font-family: "Righteous", sans-serif;
   font-size: 60px;
@@ -6,32 +10,19 @@
   text-align: center;
 }
 
-.services__title span {
-  color: #557CFF;
-}
+.services-title span {
+  color: #5F85DB;
+  position: relative;
 
-.service__item {
-  padding: 10px 20px 10px 10px;
-  transition: transform .25s ease-in-out;
-
-  &:hover {
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.15);
-    transform: scale(1.05);
+  &::after {
+    content: '';
+    width: 200%;
+    height: 5px;
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
-}
-
-.service__item h3 {
-  color: white;
-  font-family: "Righteous", sans-serif;
-  font-size: 25px;
-  text-align: left;
-}
-
-.service__item p {
-  color: rgb(206, 205, 205);
-  font-family: 'Red Hat Display', sans-serif;
-  font-size: 18px;
-  text-align: left;
 }
 
 /* Tablet view */
@@ -45,7 +36,7 @@
 /* Mobile view */
 
 @media (max-width: 576px) {
-  .service__img img {
+  .service-img img {
     width: 320px;
   }
 }

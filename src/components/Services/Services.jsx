@@ -1,6 +1,7 @@
 import React from "react";
 import {Container} from "react-bootstrap";
-import InnovationImg from "../../assets/images/innovation.png";
+import InnovationImg from "../../assets/images/innovation.svg";
+import ServiceCard from "../Card/ServiceCard";
 import "./Services.scss";
 
 const services = [
@@ -14,21 +15,14 @@ const services = [
     },
 ];
 
-const ServiceCard = ({title, content}) => (
-    <div className="service__item">
-        <h3>{title}</h3>
-        <p>{content}</p>
-    </div>
-);
-
-function Services() {
+const Services = () => {
     return (
         <Container className="pt-5 pb-5" id="services" as="section">
-            <div className="services__title">
+            <div className="services-title">
                 <h1>SERVICE<span>S</span></h1>
             </div>
             <div className="d-flex flex-column align-items-center flex-md-row justify-content-between">
-                <img className="me-md-5" src={InnovationImg} alt="services"/>
+                <img width={350} height={350} className="me-md-5" src={InnovationImg} alt="services"/>
                 <div>
                     {services && services.map((service, key) => (
                         <ServiceCard key={key} title={service.title} content={service.content}/>

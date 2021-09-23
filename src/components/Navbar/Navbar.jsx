@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container, Nav, Navbar as BSNavbar} from "react-bootstrap";
-import './Navbar.scss';
 import {Link} from "react-scroll";
+import './Navbar.scss';
 
 const links = [
     {
@@ -20,9 +20,9 @@ const links = [
 
 const Navbar = () => {
     return (
-        <BSNavbar variant="dark" bg="dark" expand="lg">
+        <BSNavbar sticky="top" variant="dark" bg="dark" expand="lg">
             <Container fluid={true}>
-                <BSNavbar.Toggle aria-controls="navbar"/>
+                <BSNavbar.Toggle label="Ouvrir la barre de navigation" aria-controls="navbar"/>
                 <BSNavbar.Collapse className="justify-content-center" id="navbar">
                     <Nav justify={true}>
                         {links && links.map((item, key) => (
