@@ -1,0 +1,60 @@
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar-track {
+  background: #212529;
+  border-radius: 20px;
+}
+
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar-thumb {
+  background-color: #5F85DB;
+  border-radius: 20px;
+  border: 3px solid #212529;
+}
+
+.projects-section {
+  margin: 0;
+  padding: 50px 20px;
+}
+
+.projects-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.projects-title h1 {
+  color: #FFFFFF;
+  font-family: "Righteous", sans-serif;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.projects-title span {
+  color: #5F85DB;
+}
+
+.slider {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.modal-caroussel {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.modal-img {
+  width: 100%;
+}
+
+.project-notfound {
+  color: white;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 200;
+}

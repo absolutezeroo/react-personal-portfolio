@@ -26,8 +26,8 @@ const Navbar = () => {
                 <BSNavbar.Collapse className="justify-content-center" id="nav">
                     <Nav justify={true}>
                         {
-                            link && link.map((item) => (
-                                <Nav.Link href={item.link}>{item.title}</Nav.Link>
+                            link && link.map((item, key) => (
+                                <Nav.Link key={key} href={item.link}>{item.title}</Nav.Link>
                             ))
                         }
                     </Nav>

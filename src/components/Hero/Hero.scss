@@ -1,0 +1,24 @@
+.hero {
+  min-height: 400px;
+  width: 100%;
+  position: relative;
+  padding: 2rem 0 2rem 0;
+}
+
+.hero__title {
+  color: #FFFFFF;
+  font-size: 3rem;
+  font-family: "Righteous", sans-serif;
+}
+
+.hero__description {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  font-family: "Righteous", sans-serif;
+}
+
+.hero__specialisation {
+  color: #5F85DB;
+  font-size: 2.5rem;
+  font-family: "Righteous", sans-serif;
+}
